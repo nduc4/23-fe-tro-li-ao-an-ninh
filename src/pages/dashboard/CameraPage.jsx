@@ -94,6 +94,7 @@ const CameraPage = () => {
                     <p className="mb-1 truncate text-lg text-sm font-medium uppercase text-gray-900 dark:text-white">
                       {item.title}
                     </p>
+                    {item.description}
                   </div>
                   <button
                     onClick={() => handleSelectCam(item.id)}
