@@ -34,7 +34,7 @@ const CameraPage = () => {
       } catch (error) {
         console.error(error);
       }
-    }, 1000);
+    }, 5000);
     return () => clearInterval(interval);
   }, []);
   
@@ -48,7 +48,7 @@ const CameraPage = () => {
       } catch (error) {
         console.error(error);
       }
-    }, 1000);
+    }, 5000);
     return () => clearInterval(interval);
   }, []);
 
