@@ -120,26 +120,15 @@ const CameraPage = () => {
               />
             </div>
             :
-            cam == 2 ?
-              <div>
-                <iframe
-                  className={`ml-10 mt-20 mb-10 aspect-video`}
-                  src="http://localhost:5000/2"
-                  width="100%"
-                  height={500}
-                  allow="autoplay"
-                />
-              </div>
-              :
-              <div>
-                <iframe
-                  className={`ml-10 mt-20 mb-10 aspect-video`}
-                  src="http://localhost:5000/3"
-                  width="100%"
-                  height={500}
-                  allow="autoplay"
-                />
-              </div>
+            <div>
+              <iframe
+                className={`ml-10 mt-20 mb-10 aspect-video`}
+                src="http://localhost:5000/2"
+                width="100%"
+                height={500}
+                allow="autoplay"
+              />
+            </div>
           }
         </div>
       </div>

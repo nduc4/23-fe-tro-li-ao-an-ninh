@@ -16,12 +16,4 @@ export const CAMERA_DATA = [
     longitude: 109.314649697,
     address: "Trần Hưng Đạo, Phường 6, Tp. Tuy Hòa, Phú Yên"
   },
-  {
-    id: 3,
-    title: "Camera 3",
-    description: "Camera 3",
-    latitude: 13.091003,
-    longitude: 109.32254165700004,
-    address: "Lê Duẩn, Phường 6, Tuy Hòa, Phú Yên"
-  },
 ];
