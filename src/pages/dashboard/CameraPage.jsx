@@ -6,6 +6,7 @@ import { getViewCameraById } from '../../utils/code.js'
 import ReactPlayer from "react-player";
 import { ToastContainer, toast } from 'react-toastify';
 import axios from 'axios'
+import axiosInstance from "../../utils/axios.js";
 
 const CameraPage = () => {
   const [cam, setCam] = useState(0)
@@ -27,7 +28,7 @@ const CameraPage = () => {
   useEffect(() => {
     const interval = setInterval(async () => {
       try {
-        const response = await axios.get('http://localhost:5000/notify_fire');
+        const response = await axiosInstance.get('notify_fire');
         if (response.data == 1) {
           toast.error("CẢNH BÁO: LỬA CHÁY");
         }
@@ -41,7 +42,7 @@ const CameraPage = () => {
   useEffect(() => {
     const interval = setInterval(async () => {
       try {
-        const response = await axios.get('http://localhost:5000/notify_fall');
+        const response = await axiosInstance.get('notify_fall');
         if (response.data == 1) {
           toast.error("CẢNH BÁO: TÉ NGÃ");
         }
@@ -113,7 +114,7 @@ const CameraPage = () => {
             <div>
               <iframe
                 className={`ml-10 mt-20 mb-10 aspect-video`}
-                src="http://localhost:5000/1"
+                src={`${import.meta.env.VITE_BASE_URL}/1`}
                 width="100%"
                 height={500}
                 allow="autoplay"
@@ -123,7 +124,7 @@ const CameraPage = () => {
             <div>
               <iframe
                 className={`ml-10 mt-20 mb-10 aspect-video`}
-                src="http://localhost:5000/2"
+                src={`${import.meta.env.VITE_BASE_URL}/2`}
                 width="100%"
                 height={500}
                 allow="autoplay"
